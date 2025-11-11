@@ -49,7 +49,6 @@ A comprehensive educational chatbot platform built with Streamlit and powered by
    - Add your Google Gemini API key:
      ```
      GEMINI_API_KEY=your_gemini_api_key_here
-     SECRET_KEY=your_secret_key_here
      DATABASE_PATH=edubot.db
      ```
 
@@ -107,7 +106,6 @@ Chatbot/
 ### Environment Variables
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here    # Required: Your Gemini API key
-SECRET_KEY=your_secret_key_here            # Optional: For session security
 DATABASE_PATH=edubot.db                    # Optional: Database file path
 ```
 
