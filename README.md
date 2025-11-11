@@ -23,12 +23,28 @@ A comprehensive educational chatbot platform built with Streamlit and powered by
 
 1. **Clone or download the project files to your desired directory**
 
-2. **Install required packages:**
+2. (recommended) Create and activate a virtual environment
+
+   - Windows (PowerShell):
+
+     ```powershell
+     python -m venv .\edubot_env
+     .\edubot_env\Scripts\Activate.ps1
+     ```
+
+   - macOS / Linux:
+
+     ```bash
+     python3 -m venv ./edubot_env
+     source ./edubot_env/bin/activate
+     ```
+
+3. **Install required packages:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Set up environment variables:**
+4. **Set up environment variables:**
    - Copy `.env.example` to `.env`
    - Add your Google Gemini API key:
      ```
@@ -37,12 +53,12 @@ A comprehensive educational chatbot platform built with Streamlit and powered by
      DATABASE_PATH=edubot.db
      ```
 
-4. **Run the application:**
+5. **Run the application:**
    ```bash
    streamlit run app.py
    ```
 
-5. **Open your browser and navigate to the provided URL (typically `http://localhost:8501`)**
+6. **Open your browser and navigate to the provided URL (typically `http://localhost:8501`)**
 
 ## 🔑 Getting Your Gemini API Key
 
@@ -152,12 +168,12 @@ DATABASE_PATH=edubot.db                    # Optional: Database file path
 - **Success Feedback**: Confirmation of actions
 - **Quick Actions**: Shortcut buttons for common tasks
 
-## � Post-Login Experience
+## Post-Login Experience
 
 Once authenticated, users are taken to a unified interaction dashboard:
 
 - **Independent Sidebar Scroll**: The left sidebar houses your profile, logout button, quick actions, and a compact statistics block (total/text/image queries + last activity). It scrolls independently from the main chat area for uninterrupted conversation flow.
-- **Real-time Chat Interface**: Modern, fixed bottom input bar with an embedded send butto. The chat history area only introduces its own scroll when messages exceed the viewport height—initially presenting a clean, scroll-free canvas.
+- **Real-time Chat Interface**: Modern, fixed bottom input bar with an embedded send button. The chat history area only introduces its own scroll when messages exceed the viewport height—initially presenting a clean, scroll-free canvas.
 - **Tabbed Interaction Modes**: Switch between the primary "Chat" tab and "Image Analysis" for vision-based educational queries without losing context.
 - **Session Controls**: Clear the current chat instantly from the sidebar.
 - **Responsive Layout**: Works smoothly across desktop and mobile, keeping the input anchored while you scroll through messages.
@@ -167,7 +183,7 @@ Once authenticated, users are taken to a unified interaction dashboard:
 - Automatic persistence: each send stores the interaction and updates analytics.
 - Scroll activation only when needed—improves focus and reduces early visual noise.
 
-## �🔐 Security Features
+## 🔐 Security Features
 
 - **Password Hashing**: BCrypt for secure password storage
 - **Session Management**: Secure user session handling
